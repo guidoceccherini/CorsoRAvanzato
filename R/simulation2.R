@@ -2,7 +2,7 @@ library(readr)
 library(dplyr)
 
 # Crea la cartella di lavoro se non esiste
-dir.create("esercizio", showWarnings = FALSE)
+dir.create("Data/esercizio", showWarnings = FALSE)
 
 # Funzione helper per generare dati simulati
 genera_dati <- function(n_file) {
@@ -29,7 +29,7 @@ genera_dati <- function(n_file) {
 # Genera e salva 3 file CSV
 for (i in 1:3) {
   nome_file <- sprintf("dati_%02d.csv", i)
-  percorso <- file.path("esercizio", nome_file)
+  percorso <- file.path("Data/esercizio", nome_file)
   
   dati_i <- genera_dati(i)
   
@@ -41,5 +41,5 @@ for (i in 1:3) {
 message("\nFile pronti per l'esercizio map_dfr().")
 message("Esempio di utilizzo in aula:")
 message('  file_csv <- list.files("esercizio", pattern = "\\\\.csv$", full.names = TRUE)')
-message('  dati_unici <- map_dfr(file_csv, read_csv)'
+# message('  dati_unici <- map_dfr(file_csv, read_csv)'
         
