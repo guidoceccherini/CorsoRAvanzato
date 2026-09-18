@@ -17,3 +17,4 @@ print(rasterNDVI_utm)
 
 
 writeRaster(rasterNDVI_utm,'Data/Multiband/rasterNDVI_utm.tiff')
+
